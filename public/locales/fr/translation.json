@@ -1,0 +1,23 @@
+{   
+    "navbar" : {
+        "home": "Acasa2",
+        "services": "Servic2ii",
+        "about-me": "Despre 2mine",
+        "learn": "Inva2ta",
+        "contact": "Cont2act",
+        "account": "Contu2l meu"
+    },
+    "firstPage" : {
+        "section1" : {
+            "hello": "Hello,",
+            "i-am": "i'm serban munteanu",
+            "function": "web developer",
+            "title" : "Your online identity suited for your needs and buget",
+            "button-1" : "Hire me",
+            "button-2" : "Get started"
+        },
+        "section2" : {
+            "title": ""
+        }
+    }
+}

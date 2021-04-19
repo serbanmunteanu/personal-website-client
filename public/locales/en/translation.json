@@ -1,0 +1,137 @@
+{   
+    "navbar" : {
+        "home": "Home",
+        "services": "Services",
+        "about-me": "About me",
+        "learn": "Learning",
+        "contact": "Contact",
+        "account": "My account",
+        "language": "Language"
+    },
+    "footer" : {
+        "services": "Services",
+        "about-me": "About me",
+        "learning": "Learning",
+        "terms-of-use": "Terms of Use",
+        "contact-me": "Contact me",
+        "faq": "FAQ",
+        "titles": {
+            "services": "Quick links",
+            "important-stuff" : "Important Stuff",
+            "follow-me" : "Follow me"
+        },
+        "copyrights" : {
+            "title" : "Copyright",
+            "location" : "Bucharest, Romania. All rights reserved."
+        },
+        "request" : {
+            "title": "Request your product",
+            "button" : "Get now"
+        }
+    },
+    "testimonials" : {
+        "title" : "Reviews from my clients",
+        "subtitle" : "Testimonials",
+        "first" : "To request a quote or want to meet up contact directly or fill out the form and I will get back to you promptly.",
+        "second" : "To request a quote or want to meet up contact directly or fill out the form and I will get back to you promptly.",
+        "third" : "To request a quote or want to meet up contact directly or fill out the form and I will get back to you promptly.",
+        "four" : "To request a quote or want to meet up contact directly or fill out the form and I will get back to you promptly.",
+        "five" : "To request a quote or want to meet up contact directly or fill out the form and I will get back to you promptly."
+    },
+    "contactForm" : {
+        "title" : "Let's talk",
+        "subtitle" : "To request a quote or want to meet up contact directly or fill out the form and I will get back to you promptly.",
+        "labels" : {
+            "name" : "Your name",
+            "email" : "Your Email",
+            "message" : "Your message"
+        },
+        "button" : "Send message"
+    },
+    "login" : {
+        "email": "Email",
+        "password" : "Password",
+        "connect": "Connect"
+    },
+    "firstPage" : {
+        "section1" : {
+            "hello": "Hello, ",
+            "i-am": " i'm serban munteanu.",
+            "function": "web developer",
+            "title" : "I enjoy creating stunning web solutions for your brand, develop e-commerce platforrm and teaching you about the <web/>.",
+            "button-1" : "Hire me",
+            "button-2" : "Get started"
+        },
+        "section2" : {
+            "pretitle": "Specializing in",
+            "title": "how can i help you?",
+            "work" : {
+                "rocket" : {
+                    "title": "Development",
+                    "description": "Front-end & Back-end developement for Web Application"
+                },
+                "cloud" : {
+                    "title": "Cloud mangament",
+                    "description": "Automate aws services for cloud needs Back-end developement for Web Applicat"
+                },
+                "teach" : {
+                    "title": "E-commerce",
+                    "description": "Learn right now the basisc of Web Programming with NodeJs, React and PHP."
+                }
+            }
+        },
+        "section3" : {
+            "question1" : {
+                "question" : "Are you looking for someone to help you creating a website for your business?",
+                "answer" : "If yes, I can help you with creative, flexible and affordable website design. I can offer strategic digital solutions. Building business in online is one of my goals."
+            },
+            "question2" : {
+                "question" : "Your goal is to protect your data and to use latest technology?",
+                "answer" : "I can ensure cloud management is 100% secured and will became your virtual fortress. Life can be easier by choosing cloud infrastructure resources and services and I can develop it for you."
+            },
+            "question3" : {
+                "question" : "Do you want your customers to be able to buy your services and products online?",
+                "answer" : "Good that you reached the perfect person for this! I can help you creating your ideal marketplace that will increase your business revenue day by day. Let’s make you some money!"
+            }
+        },
+        "section4" : {
+            "title" : "Maximize your skills & passion",
+            "subtitle" : "Boost your personal and professional skills, helped by me.",
+            "button" : "Take test"
+        }
+    },
+    "aboutMePage" : {
+        "section1" : {
+            "pretitle" : "who I am ?",
+            "title" : "My background",
+            "education" : {
+                "acs" : {
+                    "name" : "Faculty of Automatic Control and Computers",
+                    "profile": "Systems Engineering"
+                },
+                "design" : {
+                    "name" : "Design Patterns and Principles",
+                    "profile": "Technical Training Victor Rentea"
+                },
+                "refactoring" : {
+                    "name" : "Clean Code and Refactoring",
+                    "profile": "Technical Training Victor Rentea"
+                }
+            },
+            "work": {
+                "retargeting" : {
+                    "profile" : "Junior Web Developer",
+                    "location" : "Bucharest, Romania"
+                },
+                "molson" : {
+                    "profile" : "Web Developer",
+                    "location" : "Bucharest, Romania"
+                },
+                "ubisoft" : {
+                    "profile" : "Web Developer",
+                    "location" : "Bucharest, Romania"
+                }
+            }
+        }
+    }
+}

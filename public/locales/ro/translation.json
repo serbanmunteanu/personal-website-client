@@ -1,0 +1,39 @@
+{   
+    "navbar" : {
+        "home": "Acasa",
+        "services": "Servicii",
+        "about-me": "Despre mine",
+        "learn": "Invata",
+        "contact": "Contact",
+        "account": "Contul meu",
+        "language": "Limba"
+    },
+    "firstPage" : {
+        "section1" : {
+            "hello": "Salut, ",
+            "i-am": "eu sunt serban munteanu",
+            "function": "web developer",
+            "title" : "Imi place sa creez solutii web uimitoare pentru brandul tau, sa dezvolt platforme de comert electronic si sa va invat despre <web/>.",
+            "button-1" : "Angajeaza-ma",
+            "button-2" : "Incepe acum"
+        },
+        "section2" : {
+            "pretitle": "specializat in",
+            "title": "ceea ce stiu",
+            "work" : {
+                "rocket" : {
+                    "title": "Development",
+                    "description": "Front-end & Back-end developement for Web Application"
+                },
+                "cloud" : {
+                    "title": "Cloud mangament",
+                    "description": "Automate aws services for cloud needs Back-end developement for Web Applicat"
+                },
+                "teach" : {
+                    "title": "E-commerce",
+                    "description": "Learn right now the basisc of Web Programming with NodeJs, React and PHP."
+                }
+            }
+        }
+    }
+}
