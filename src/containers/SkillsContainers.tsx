@@ -27,7 +27,7 @@ const SkillsContainers: React.FC<SkillsContainerProps> = ({isVisible}) => {
         }
     ]);
     return (
-        <div className="skill__container">
+        <div className="container flex flex-wrap md:flex-nowrap md:flex-row justify-evenly items-center">
             {
                 skills.map(skill => <Skill icon={skill.icon} percentage={isVisible ? skill.percentage : 0}/>)
             }

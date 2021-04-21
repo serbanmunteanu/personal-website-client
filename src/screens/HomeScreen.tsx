@@ -86,9 +86,9 @@ function HomeScreen() {
 
     return (
         <div
-            className="homeScreen Screen">
+            className="m-5">
             <div className="container flex flex-col-reverse md:flex-row mx-auto">
-                <div className="m-5 md:container md:m-5 justify-center flex flex-col md:max-w-lg">
+                <div className="md:container md:m-5 justify-center flex flex-col md:max-w-lg">
                     <div className="flex uppercase tracking-wide font-serif my-5">
                         <h3 className="color-red">
                             {`${t('firstPage.section1.hello')}`}
@@ -135,9 +135,9 @@ function HomeScreen() {
             </div> 
             <div className="container mx-auto flex flex-col md:flex-row justify-evenly">
                     <div className="container flex flex-col">
-                    <h1 className="center ml-5 text-5xl mb-5 md:mt-16 md:mb-5 md:ml-16 font-serif md:text-7xl">{t('firstPage.section4.title')}</h1>
-                    <h4 className="ml-5 mb-5 md:mb-5 md:ml-16 font-serif text-gray-300">{t('firstPage.section4.subtitle')}</h4>
-                    <div className="button ml-5 mb-10 md:ml-16"> 
+                    <h1 className="center text-5xl mb-5 md:mt-16 md:mb-5 md:ml-16 font-serif md:text-7xl">{t('firstPage.section4.title')}</h1>
+                    <h4 className="mb-5 md:mb-5 md:ml-16 font-serif text-gray-300">{t('firstPage.section4.subtitle')}</h4>
+                    <div className="button mb-10 md:ml-16"> 
                         <motion.button 
                             whileHover={{scale: 1.2}} 
                             className="homeScreen_button colored"
@@ -147,13 +147,13 @@ function HomeScreen() {
                         </motion.button>
                     </div>
                     </div>
-                <div className="mx-5 md:container">
+                <div className="md:container">
                     <LearningSearch />
                 </div>
             </div>
-                <div className="mx-5 md:container md:mx-auto flex flex-col-reverse md:flex-row justify-evenly">
+                <div className="md:container md:mx-auto flex flex-col-reverse md:flex-row justify-evenly md:-mt-16">
                 <div className="mx-auto w-full md:w-2/4">
-                    <img src={animoji} alt=""/>
+                    <img className="mx-auto" src={animoji} alt=""/>
                 </div>
                 <div className="container flex flex-col">
                     <Notification 
@@ -179,7 +179,7 @@ function HomeScreen() {
                     />
                 </div>
                 </div>
-            <div className="m-10 md:container md:mx-auto flex flex-col md:flex-row justify-evenly">
+            <div className="my-10 md:container md:mx-auto flex flex-col md:flex-row justify-evenly">
                 <div className="w-full md:container">
                     <ContactForm />
                 </div>
@@ -187,7 +187,7 @@ function HomeScreen() {
                 <Mail />
                 </div>
             </div>
-            <div className="m-5 md:container md:mx-auto">
+            <div className="md:container md:mx-auto">
                 <h3 id="section6-title" className="color-red text-center uppercase tracking-wider text-xl font-serif">
                     {t('testimonials.subtitle')}
                     </h3>

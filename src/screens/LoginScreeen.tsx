@@ -7,10 +7,10 @@ function LoginScreen() {
     const [register, setRegister] = React.useState(false);
 
     return (
-        <div className="md-5 flex flex-col md:flex-row">
+        <div className="m-5 flex flex-col md:flex-row">
             <LoginCard />
-                <div className="loginContainer">
-                <div className="types">
+                <div className="container flex flex-col-reverse md:flex-row">
+                <div>
                     <span onClick={() => setRegister(false)} className={`${register ? '' : 'inactive'}`} >Log in</span>
                     <span onClick={() => setRegister(true)} className={`${register ? 'inactive' : ''}`}>No account ? Register now</span>
                 </div>

@@ -11,7 +11,7 @@ const Work: React.FC<WorkProps> = ({component, title, description}) => {
     const {t} = useTranslation();
 
     return (
-        <div className="glass my-5 mx-5 md:w-1/3">
+        <div className="glass my-5 md:w-1/3 md:mr-5">
             {component}
             <div className="container text-center capitalize font-serif font-medium text-xl mb-3">
                 {t(title)}

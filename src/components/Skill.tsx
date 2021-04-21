@@ -10,7 +10,7 @@ interface SkillProps {
 
 const Skill: React.FC<SkillProps> = ({icon, percentage}) => {
     return (
-        <div className="skill">
+        <div className="w-2/5 md:w-40 pb-5">
             <CircularProgressbarWithChildren
                 value={percentage}
                 styles={{
