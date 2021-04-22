@@ -2,12 +2,13 @@ import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import animoji from './animoji2.png';
 import Notification from '../components/Notification';
-import { faGraduationCap, faUserTie, faCalendarAlt, faPhoneAlt, faEnvelope, faHome  } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap, faUserTie, faCalendarAlt, faPhoneAlt, faEnvelope, faHome, faDownload  } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../state.provider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import VisibilitySensor from "react-visibility-sensor";
 import SkillsContainers from '../containers/SkillsContainers';
 import CloudContainers from '../containers/CloudContainers';
+import { motion } from 'framer-motion';
 
 function AboutMeScreen() {
     const { t } = useTranslation();
@@ -95,6 +96,14 @@ function AboutMeScreen() {
                 </div>
                 <div className="-mt-5 md:w-1/3 flex align-center">
                     <img src={animoji} alt="" className="mx-auto my-auto"/>
+                    <a href={animoji} download>
+                    <motion.button 
+                            whileHover={{scale: 1.2}} 
+                            className="colored flex flex-row px-5 mb-5 xl:px-10 py-2 rounded-lg items-center mx-auto"
+                        >
+                            <FontAwesomeIcon className="" icon={faDownload} size="2x"/><h1 className="ml-2"> CV</h1> 
+                    </motion.button>
+                    </a>   
                 </div>
                 <div className="container md:w-1/3 md:my-auto">
                     <Notification 

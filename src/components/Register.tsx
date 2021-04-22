@@ -43,14 +43,14 @@ function Register() {
 
     return (
         <div className="login">
-        <form className="loginForm">
-                <label className="contactForm__label">{t('login.email')}</label>
+        <form className="flex flex-col font-serif">
+                <label className="container mt-3 mb-2 text-xl">{t('login.email')}</label>
                 <input ref={emailRef} className="contactForm__input glass" type="text"/>
-                <label className="contactForm__label">{t('login.password')}</label>
+                <label className="container mt-3 mb-2 text-xl">{t('login.password')}</label>
                 <input ref={passwordRef} className="contactForm__input glass" type="password"/>
-                <label className="contactForm__label">{t('login.password')} repeat</label>
+                <label className="container mt-3 mb-2 text-xl">{t('login.password')} repeat</label>
                 <input ref={repeatPasswordRef} className="contactForm__input glass" type="password"/>
-                <div className="contactForm__div__button">
+                <div className="container my-3">
                 <button 
                     onClick={(e) => register(e)}
                     className="contactForm__button colored">Register</button>

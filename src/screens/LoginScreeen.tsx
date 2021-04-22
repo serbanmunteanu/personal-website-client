@@ -9,10 +9,10 @@ function LoginScreen() {
     return (
         <div className="m-5 flex flex-col md:flex-row">
             <LoginCard />
-                <div className="container flex flex-col-reverse md:flex-row">
+                <div className="container md:w-1/5 flex flex-col-reverse justify-center mx-auto md:ml-5 md:mr-auto md:pb-16">
                 <div>
-                    <span onClick={() => setRegister(false)} className={`${register ? '' : 'inactive'}`} >Log in</span>
-                    <span onClick={() => setRegister(true)} className={`${register ? 'inactive' : ''}`}>No account ? Register now</span>
+                    <span onClick={() => setRegister(false)} className={`${register ? '' : 'inactive'} cursor-pointer`} >Do you have account ? <span className="color-red hover:underline">Log in.</span> </span>
+                    <span onClick={() => setRegister(true)} className={`${register ? 'inactive' : ''} cursor-pointer`}>No account ? <span className="color-red hover:underline">Register now.</span> </span>
                 </div>
                 {
                     register ? <Register /> : <Login />
