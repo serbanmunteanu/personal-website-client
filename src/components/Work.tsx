@@ -12,7 +12,9 @@ const Work: React.FC<WorkProps> = ({component, title, description}) => {
 
     return (
         <div className="glass my-5 md:w-1/3 md:mr-5">
-            {component}
+            <div className="container my-6 h-48 md:h-40 lg:h-44 xl:h-52 2xl:h-64">
+                {component}
+            </div>
             <div className="container text-center capitalize font-serif font-medium text-xl mb-3">
                 {t(title)}
             </div>

@@ -2,7 +2,6 @@ import React from 'react'
 
 function Teach() {
     return (
-        <div className="container my-6 h-48 md:h-40 lg:h-44 xl:h-52 2xl:h-64">
             <svg className="mx-auto h-full" viewBox="0 0 164 120" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M86.18 93.1376C110.083 93.1376 129.46 73.6046 129.46 49.5095C129.46 25.4144 110.083 5.88147 86.18 5.88147C62.2771 5.88147 42.8999 25.4144 42.8999 49.5095C42.8999 73.6046 62.2771 93.1376 86.18 93.1376Z" fill="#2A2E39"/>
 <g filter="url(#filter0_d)">
@@ -183,8 +182,6 @@ function Teach() {
 </linearGradient>
 </defs>
 </svg>
-
-        </div>
     )
 }
 

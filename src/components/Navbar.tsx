@@ -14,7 +14,7 @@ function Navbar() {
     },[])
 
     return (
-        <div className="navbar"> 
+        <div className="navbar font-serif"> 
             <NavbarLinks />
         </div>
     )

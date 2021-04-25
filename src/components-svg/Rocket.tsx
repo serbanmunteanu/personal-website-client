@@ -2,7 +2,6 @@ import React from 'react'
 
 function Rocket() {
     return (
-        <div className="container my-6 h-48 md:h-40 lg:h-44 xl:h-52 2xl:h-64">
             <svg className="mx-auto h-full" viewBox="0 0 120 110" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="28 1">
 <path id="Vector" d="M10.3805 36.9799C11.645 36.5667 12.337 35.2014 11.926 33.9303C11.5149 32.6593 10.1566 31.9638 8.89202 32.3769C7.62744 32.79 6.93549 34.1554 7.34651 35.4264C7.75753 36.6975 9.11587 37.393 10.3805 36.9799Z" fill="#2A2E38"/>
@@ -264,8 +263,6 @@ function Rocket() {
 </linearGradient>
 </defs>
 </svg>
-
-        </div>
     )
 }
 
