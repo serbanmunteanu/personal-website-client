@@ -4,6 +4,8 @@ import { faReact, faHtml5, faCss3, faNode, faPhp, faDocker, faAws, faGoogle, faJ
 import Rocket from '../components-svg/Rocket';
 import Cloud from '../components-svg/Cloud';
 import Teach from '../components-svg/Teach';
+import TimelineCustom, { TimelineProps } from '../containers/Timeline';
+import { faChartBar, faChartLine, faShoppingBag, faShoppingCart, faSignInAlt, faSmileWink } from '@fortawesome/free-solid-svg-icons';
 
 function ServicesScreen() {
     const [services, setServices] = React.useState([
@@ -113,6 +115,44 @@ function ServicesScreen() {
             frameworks: ['Magento 2', 'Shopify', 'Wordpress', 'OpenCart'],
         }
     ]);
+
+    const items: TimelineProps[] = [
+        { 
+            icon: faSignInAlt,
+            flip: false,
+            text: 'Make account',
+            description: 'Enter your credentials for me to know who are you',
+            last: false
+        },
+         { 
+            icon: faShoppingBag,
+            flip: true,
+            text: 'Request project',
+            description: 'Enter your credentials for me to know who are you',
+            last: false
+        },
+         { 
+            icon: faChartBar,
+            flip: false,
+            text: 'See estimations',
+            description: 'Enter your credentials for me to know who are you',
+            last: false
+        },
+         { 
+            icon: faChartLine,
+            flip: true,
+            text: 'Analyze progress',
+            description: 'Enter your credentials for me to know who are you',
+            last: false
+        },
+         { 
+            icon: faSmileWink,
+            flip: false,
+            text: 'Enjoy result',
+            description: 'Enter your credentials for me to know who are you',
+            last: true
+        }
+    ]
     return (
         <div className="mx-5 my-5">
             <div className="container flex flex-col md:flex-row font-serif justify-center mx-auto">
@@ -149,6 +189,10 @@ function ServicesScreen() {
                             frameworks={item.frameworks}
                         />)
                 }
+            </div>
+            <h1 className="text-3xl text-center font-serif uppercase tracking-wider color-red my-2 md:my-5">How it work's</h1> 
+            <div className="container w-full md:w-3/4 mx-auto font-serif">
+               <TimelineCustom items={items}/>
             </div>
         </div>
     )

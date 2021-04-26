@@ -6,6 +6,19 @@
   color: #83A6FF !important;
 }
 
+.bg-color-red {
+  background-color:#F53689 !important;
+}
+
+.bg-color-blue {
+  background-color: #83A6FF !important;
+}
+
+.flip {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
 .gradient-blue {
     
     /* Create the gradient. */
