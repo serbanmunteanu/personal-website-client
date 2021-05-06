@@ -5,7 +5,7 @@ import Rocket from '../components-svg/Rocket';
 import Cloud from '../components-svg/Cloud';
 import Teach from '../components-svg/Teach';
 import TimelineCustom, { TimelineProps } from '../containers/Timeline';
-import { faChartBar, faChartLine, faShoppingBag, faShoppingCart, faSignInAlt, faSmileWink } from '@fortawesome/free-solid-svg-icons';
+import { faChartBar, faChartLine, faShoppingBag, faSignInAlt, faSmileWink } from '@fortawesome/free-solid-svg-icons';
 
 function ServicesScreen() {
     const [services, setServices] = React.useState([

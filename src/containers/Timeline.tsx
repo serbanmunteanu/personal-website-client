@@ -31,7 +31,7 @@ const TimelineCustom = (props: {items: TimelineProps[]}) => {
                  { !item.last && <TimelineConnector className="h-16 bg-color-red"/> }
                 </TimelineSeparator>
                 <TimelineContent>
-                    <div className="container glass p-2">
+                    <div className="container glass p-2 md:-mt-1">
                         <h1 className="text-xl text-center">{item.text}</h1>
                         <p className="text-gray-300 text-center">{item.description}</p>
                     </div>
