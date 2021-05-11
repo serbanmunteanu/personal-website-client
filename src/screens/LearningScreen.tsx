@@ -7,6 +7,8 @@ import Results from '../components-svg/Results';
 import Target from '../components-svg/Target';
 import Test from '../components-svg/Test';
 import axios from '../axios';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 
 interface ActiveQuestionsProp {
     id: number;
@@ -109,7 +111,8 @@ function LearningScreen() {
                     category: value.category
                 }
             });
-            console.log(result.data)
+            setScore(result.data.grade);
+            setTestPercentage(0);
         } catch (error) {
             console.log(error);
         }
@@ -118,16 +121,21 @@ function LearningScreen() {
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
     const [result, setResult] = React.useState<ResultProps[]>([]);
     const [showScore, setShowScore] = React.useState(false);
+    const [score, setScore] = React.useState(0);
+    const [testPercentage, setTestPercentage] = React.useState(0);
+    const emailRef = React.useRef(null);
+    const [email,setEmail] = React.useState('');
 
     const handleAnswerOptionClick = (questionId: number, answerId: number, category: string) => {
 		const nextQuestion = currentQuestion + 1;
         const newResult = [...result, {questionId, answerId}];
         setResult(newResult);
+        setTestPercentage(testPercentage + 100/activeQuestions?.questions.length);
 
 		if (nextQuestion < activeQuestions?.questions.length) {
 			setCurrentQuestion(nextQuestion);
 		} else {
-            sendSubmission({email: 'tanan@gmail.com', category, submissions: newResult});
+            sendSubmission({email: email, category, submissions: newResult});
             setShowScore(true);
         }
 	};
@@ -167,27 +175,61 @@ function LearningScreen() {
             </div>
 
             {showScore ? (
-				<div className='score-section'>
-					{
-                        result.length
-                    }
+				<div className='text-center'>
+					Congrat's. Your score is {score}/{activeQuestions?.questions.length}
 				</div>
 			) : (
 				<>
-					<div className='question-section'>
-					<div className='question-text'>{activeQuestions?.questions[currentQuestion].question}</div>
-					</div>
-					<div className='answer-section'>
-						{activeQuestions?.questions[currentQuestion].answers.map((answerOption) => (
-                            <div className="">
-                                <button onClick={() => handleAnswerOptionClick(
-                                    activeQuestions?.questions[currentQuestion].id,
-                                    answerOption.id, 
-                                    activeQuestions?.name
-                                )}>{answerOption.data}</button>
-                            </div>
-						))}
-			        </div>
+                    <div className="flex justify-center">
+                        {
+                            email === '' ? (
+                                <form className="flex flex-col w-1/4 px-10">
+                                    <label className="mb-3 text-xl">Email</label>
+                                    <input ref={emailRef} className="contactForm__input glass mb-2" type="email"/>
+                                    <button className="contactForm__button colored"
+                                            onClick={(e) => { 
+                                                e.preventDefault();
+                                                setEmail(emailRef.current.value);
+                                            }}
+                                    >Next</button>
+                                </form>
+                            ) : (
+                                <>
+                                     <div className="flex flex-col justify-evenly w-2/6">
+                                        <div className='text-xl font-serif'>{activeQuestions?.questions[currentQuestion].question}</div>
+                                        <div className='font-serif text-gray-300'>
+                                            {activeQuestions?.questions[currentQuestion].answers.map((answerOption,index) => (
+                                                <div className="hover:text-white">
+                                                    <button onClick={() => handleAnswerOptionClick(
+                                                        activeQuestions?.questions[currentQuestion].id,
+                                                        answerOption.id, 
+                                                        activeQuestions?.name
+                                                    )}
+                                                    className="focus:outline-none"
+                                                    >{index+1}.{answerOption.data}</button>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </>
+                            )
+                        } 
+                       <div className="container w-1/12 align-center">
+                        <CircularProgressbarWithChildren
+                                value={testPercentage}
+                                styles={{
+                                    path: {
+                                        stroke: '#F53689',
+                                        transition: 'stroke-dashoffset 0.5s ease 0s',
+                                    },
+                                    trail: {
+                                        stroke: 'rgba(255,255,255,.6)'
+                                    }
+                            }}> 
+                                <h1 className="text-3xl">{testPercentage}%</h1>
+                            </CircularProgressbarWithChildren>
+                       </div>
+                    </div>
 				</>
 			)}
             
